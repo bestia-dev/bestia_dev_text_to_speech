@@ -1,0 +1,16 @@
+[package]
+name = "bestia_dev_text_to_speech"
+version = "0.1.28"
+description = "Text-to-speech CLI using Google api"
+authors = ["bestia.dev <info@bestia.dev>"]
+edition = "2021"
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/bestia-dev/bestia_dev_text_to_speech"
+categories = ["rust-patterns"]
+keywords = ["text to speech"]
+publish = false
+
+[dependencies]
+log = "0.4"
+pretty_env_logger="0.4.0"
