@@ -77,14 +77,26 @@ code .
 
 1. In Cargo.toml change the name and the description and some other info.
 2. In `VSCode terminal` type `cargo auto release` to copy the title and description to README.md and lib.rs.
-3. Replace the title in other files. In VSCode Ctrl+Shift+H to open the replace in all files. Search for `bestia_dev_cargo_auto_new_cli`, replace with `bestia_dev_text_to_speech`. When you click on the result list item, you can see what you are actually replacing. A small icon at the right end of the item is `Replace (Ctrl+Shift+1)`.  
-4. Open README.md and delete the text you don't need. Don't delete the markers for the automation. YOU can see the markdown preview (Ctrl+k, v).
+3. Replace the title in other files. In VSCode Ctrl+Shift+H to open the replace in all files. Search for `bestia_dev_cargo_auto_new_cli`, replace with `bestia_dev_text_to_speech`. When you click on the result list item, you can see what you are actually replacing. A small icon at the right end of the item is `Replace (Ctrl+Shift+1)`.
 
 For now I will leave the functions that are used in examples and tests. I will modify them, when the new functions will be ready.  
 
 ## Github push new project
 
-On the Github website create a new project <https://github.com/new>, copy the name and the description from Cargo.toml. You don't need other files magically created. Save the new project. Github is very kind to give us some Git commands we can use. First in VSCode open Source Control (Ctrl+Shift+G), click `Initialize Repository`, type the message `init` 
+First in VSCode open Source Control (Ctrl+Shift+G), click `Initialize Repository`, type the message `init` and Ctrl+Enter.
+On the Github website create a new project <https://github.com/new>, copy the name and the description from Cargo.toml. You don't need other files magically created. Save the new project. Github is very kind to give us some Git commands we can use. Now in `VSCode terminal` copy the commands from Github (second group):
+
+```bash
+git remote add origin git@github.com:bestia-dev/bestia_dev_text_to_speech.git
+git branch -M main
+git push -u origin main
+```
+
+## README.md
+
+Open `README.md` and delete the text you don't need. Don't delete the markers for the automation. You can see the markdown preview with (Ctrl+k, v). Save the changes.
+Commit the changes and push in `VSCode terminal`: `cargo auto commit_and_push "readme cleaned"`
+
 
 
 
