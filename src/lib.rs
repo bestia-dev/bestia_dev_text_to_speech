@@ -3,11 +3,11 @@
 // region: auto_md_to_doc_comments include README.md A //!
 //! # bestia_dev_text_to_speech
 //!
-//! **Basic Rust project template for CLI, more than just `cargo new hello`**  
-//! ***version: 0.1.26 date: 2022-04-01 author: [bestia.dev](bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
+//! **Text-to-speech CLI using Google api**  
+//! ***version: 0.1.30 date: 2022-04-08 author: [bestia.dev](bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-61-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-218-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-63-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-165-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 //! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-15-yellow.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-20-orange.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
@@ -16,183 +16,115 @@
 //!
 //! ## Motivation
 //!
-//! My first line I typed when I learned the Rust language was `cargo new hello`. It is extraordinary for learning Rust, but it is a rudimentary example, not really useful in practical life.
+//! After creating some interesting projects and tutorials for rust development and sharing them on Github, I wanted to create youtube videos for them. Sometimes it is easier to follow a video tutorial then to read kilometers of text tutorials.  
+//! The easy part is capturing the screen with `OBS Studio`. Everything visual is going on on the screen. It is a computer project, after all. The hard part is the spoken text.  
+//! It is impossible to just naturally talk about what I am doing while recording the screen. Maybe somebody has the talent of fast and focused speech. I don't. Maybe because I am not a native English speaker. I am not at home as a speaker.  
+//! And my voice sound terrible and the accent and intonation is just not what english should sound like.
+//! But I can write pretty well. It takes ages and it is very slow, but I am happy with the result.  
+//! I am a programmer and for me every problem has a software solution. This is the story when you have a hammer, everything looks like a nail.
 //!
-//! I created this project template `bestia_dev_text_to_speech` for a simple CLI application that has all the moving parts for a real life project.
+//! Finally I decided to use a text-to-speech approach.
 //!
-//! ## Separate bin and lib
+//! I have a (very cheap) google account that I use for a VM that hosts my domain and my website. Google is very kind to offer text-to-speech api for free for 1 million characters. I hope this could be the right solution for me. It sounds very natural. It uses some magic neural network and it sounds definitely better then me.  
+//! But it is only an api. There is no prepared application or website that I can use.
 //!
-//! It is always good to split the project between a `bin` (executable) and a `lib` (library crate).
+//! What is more fun, than write an application in Rust for my problem?  
 //!
-//! Even for the smallest project. Maybe some other program will use the library eventually.
+//! ## Rust CLI from template
 //!
-//! All the input/output is coded in the `bin`. The library must not operate directly with the stdin/stdout, because some other caller of the library can have other ideas around input-output options.
-//!
-//! A separate `lib` enables to make good tests without worrying about input-output.
-//!
-//! ## super simple argument parsing
-//!
-//! I use a super simple code to parse CLI arguments inside the `src/bin/bestia_dev_text_to_speech.rs`. There are crate libraries that enables very complex argument parsing if needed.
-//!
-//! ## automation_tasks_rs
-//!
-//! Building a project is always more complex then just `cargo build` and `cargo run`. There are always some files to copy or some content to copy from file to file. For this I use `cargo-auto` - automation tasks written in Rust language for the build process of rust projects.
-//!
-//! All the source is inside the folder `automation_tasks_rs`. It is pure Rust, it is easy to understand and modify to your needs.
-//!
-//! To start using it just type in `VSCode terminal`:
+//! The easiest application to write in Rust is a CLI in Linux. And honestly I don't need more. I will have a text file as input and an mp3 file as output. Perfect for a CLI application.
+//! For the first time I will develope a new Rust application entirely inside a docker container using my project <https://github.com/bestia-dev/docker_rust_development>. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (<https://github.com/bestia-dev/win10_wsl2_debian11>).  
+//! In `WSL2 terminal`:
 //!
 //! ```bash
-//! cargo auto
+//! cd rustprojects/docker_rust_development/
+//! # my development pod/container is already created. I just need to restart it after reboot
+//! sh rust_dev_pod_after_reboot.sh
 //! ```
 //!
-//! ```bash
-//! User defined tasks in automation_tasks_rs:
-//! cargo auto build - builds the crate in debug mode, fmt
-//! cargo auto release - builds the crate in release mode, version from date, fmt, strip
-//! cargo auto doc - builds the docs, copy to docs directory
-//! cargo auto commit_and_push - commits with message and push with mandatory message
-//!  if you use SSH, it is easy to start the ssh-agent in the background and ssh-add your credentials for git
-//! cargo auto publish_to_crates_io - publish to crates.io, git tag
-//! ```
+//! In VSCode: `F1`, type `ssh`, choose `Remote-SSH:Connect to Host...`, choose `rust_dev_pod`, type the passphrase for the SSH key. We have opened a new VSCode window that works inside the Rust development container.
 //!
-//! The `bash auto-completion` should work. If you type `cargo auto b` and press `tab` it should auto-complete to `build`. Look at the project <https://github.com/bestia-dev/dev_bestia_cargo_completion>.
+//! I will also use for the first time my template for Rust CLI development: <https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli>. It separates a lib and a bin, so the project could be used as a library for other projects. It has prepared automation tasks for building the project and some samples how to use tests and examples.  
+//! In `VSCode terminal`:
 //!
 //! ```bash
-//! cargo auto build
-//! ```
-//!
-//! ```bash
-//! Running automation task: build
-//! old version: "0.1.18"
-//! new version: '0.1.19'
-//! $ cargo fmt
-//! $ cargo build
-//! Compiling bestia_dev_text_to_speech v0.1.19 (/home/rustdevuser/rustprojects/bestia_dev_text_to_speech)
-//! Finished dev [unoptimized + debuginfo] target(s) in 2.72s
-//!
-//! After `cargo auto build`, run the compiled binary
-//! run `./target/debug/bestia_dev_text_to_speech text.txt`
-//! later
-//! run `cargo auto release`
-//! ```
-//!
-//! After the task there is a recommendation what to do next.
-//!
-//! ```bash
-//! cargo auto release
-//! ```
-//!
-//! ```bash
-//! Running automation task: release
-//! old version: "0.1.20"
-//! new version: '0.1.21'
-//! new text: '
-//! **Basic Rust project template for CLI, more than just `cargo new hello`**
-//! ***version: 0.1.21 date: 2022-04-01 author: [bestia.dev](bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***'
-//!
-//! include_into_readme_md write file: README.md
-//! $ cargo fmt
-//! $ cargo build --release
-//! Compiling bestia_dev_text_to_speech v0.1.21 (/home/rustdevuser/rustprojects/bestia_dev_text_to_speech)
-//! Finished release [optimized] target(s) in 1.05s
-//!
-//! After `cargo auto release`, , run the compiled binary
-//! run `./target/release/bestia_dev_text_to_speech print my_name`
-//! later
-//! run `cargo auto doc`
+//! # save the passphrase to communicate with Github over SSH
+//! eval $(ssh-agent)
+//! ssh-add /home/rustdevuser/.ssh/githubssh1
+//! # clone the template
+//! mkdir ~/rustprojects
+//! cd ~/rustprojects
+//! git clone git@github.com:bestia-dev/bestia_dev_cargo_auto_new_cli.git
+//! # rename the template to the project name
+//! mv bestia_dev_cargo_auto_new_cli bestia_dev_text_to_speech
+//! cd bestia_dev_text_to_speech
+//! # remove the git files, because now it is a new project
+//! rm -r -f .git
+//! rm -r docs
+//! mv src/bin/bestia_dev_cargo_auto_new_cli.rs src/bin/bestia_dev_text_to_speech.rs
+//! # open a new VSCode window inside the new project
+//! code .
 //!
 //! ```
 //!
-//! Release is incrementing the version number and date, copying the title and description from Cargo.toml to README.md. Calculates the lines of code in the project and makes badges from it in README.md. Copying the README into doc comments, so the documentation can be compiled later.
+//! ## Template Renaming
+//!
+//! 1. In Cargo.toml change the name and the description and some other info.
+//! 2. In `VSCode terminal` type `cargo auto release` to copy the title and description to README.md and lib.rs.
+//! 3. Replace the title in other files. In VSCode Ctrl+Shift+H to open the replace in all files. Search for `bestia_dev_cargo_auto_new_cli`, replace with `bestia_dev_text_to_speech`. When you click on the result list item, you can see what you are actually replacing. A small icon at the right end of the item is `Replace (Ctrl+Shift+1)`.
+//!
+//! For now I will leave the functions that are used in examples and tests. I will modify them, when the new functions will be ready.  
+//!
+//! ## Github push new project
+//!
+//! First in VSCode open Source Control (Ctrl+Shift+G), click `Initialize Repository`, type the message `init` and Ctrl+Enter.
+//! On the Github website create a new project <https://github.com/new>, copy the name and the description from Cargo.toml. You don't need other files magically created. Save the new project. Github is very kind to give us some Git commands we can use. Now in `VSCode terminal` copy the commands from Github (second group):
 //!
 //! ```bash
-//! cargo auto doc
+//! git remote add origin git@github.com:bestia-dev/bestia_dev_text_to_speech.git
+//! git branch -M main
+//! git push -u origin main
 //! ```
+//!
+//! ## README.md
+//!
+//! Open `README.md` and delete the text you don't need. Don't delete the markers for the automation. You can see the markdown preview with (Ctrl+k, v). Save the changes.
+//! Commit the changes and push in `VSCode terminal`: `cargo auto commit_and_push "readme cleaned"`
+//! Commit and push often to reduce the risk of loosing your work.
+//!
+//! ## google api text-to-speech
+//!
+//! In my googlecloud account I enabled the text-to-speech api: <https://console.cloud.google.com/apis/api/texttospeech.googleapis.com>  
+//! Service name `texttospeech.googleapis.com`  
+//! I need some credentials to access the api: <https://console.cloud.google.com/apis/credentials>
+//! Click `+Create credentials`, `API key`, then `edit`, rename to `API text-to-speech`, restrict to only `Cloud Text-to-Speech API`.
+//! Use this key in your application by passing it with the `?key=API_KEY` parameter for every request.
+//! Save this api key in env variable:
 //!
 //! ```bash
-//! Running automation task: doc
-//! $ cargo doc --no-deps --document-private-items
-//!  Documenting bestia_dev_text_to_speech v0.1.21 (/home/rustdevuser/rustprojects/bestia_dev_text_to_speech)
-//! Finished dev [unoptimized + debuginfo] target(s) in 0.54s
-//! $ rsync -a --info=progress2 --delete-after target/doc/ docs/
-//! 2,787,371 100% 46.60MB/s 0:00:00 (xfr#56, to-chk=0/61)
-//!
-//! After `cargo auto doc`, check `docs/index.html`. If ok, then
-//! run `cargo auto commit_and_push` with mandatory commit message
+//! # put a space before the command to disable bash history
+//!  export bestia_dev_text_to_speech_api_key=YOUR_API_KEY
+//! env
+//! echo $bestia_dev_text_to_speech_api_key
+//! # finally to delete the env variable after use
+//! unset bestia_dev_text_to_speech_api_key
 //! ```
 //!
-//! If you Ctrl+Click on the link `docs/index.html` it will open the file in VSCode editor. In the right corner you can click to see the Live Preview. It will open the preview for the html file in an integrated browser in VSCode. Very useful.
-//! Now is a good time to run all the test before committing.
+//! The simplest example from google:
 //!
 //! ```bash
-//! cargo test
+//! curl -X POST \
+//! -H "Content-Type: application/json; charset=utf-8" \
+//! -d @request.json \
+//! "https://texttospeech.googleapis.com/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key"
 //! ```
 //!
-//! If we are happy with the changes, we commit and push:
+//! Because of https only the domain part of the url `texttospeech.googleapis.com` is visible on the wire. The rest of the url `/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key` is encrypted. So it looks that the api-key is secure. They are encrypted on the wire (in transport) but if either end (user or server) logs the URL to a plain text file and does not sanitize credentials... now that's a different conversation. Browsers can save the entire url in history, but I am not using a browser.
 //!
-//! ```bash
-//! cargo auto commit_and_push "my message for commit"
-//! ```
+//! ## https client
 //!
-//! ```bash
-//! Running automation task: commit_and_push
-//! $ git add -A && git commit -m "readme"
-//! [main 3bdcc91] readme
-//!  9 files changed, 443 insertions(+), 89 deletions(-)
-//! $ git push
-//! Enumerating objects: 36, done.
-//! Counting objects: 100% (36/36), done.
-//! Delta compression using up to 6 threads
-//! Compressing objects: 100% (16/16), done.
-//! Writing objects: 100% (19/19), 6.27 KiB | 1.25 MiB/s, done.
-//! Total 19 (delta 11), reused 0 (delta 0), pack-reused 0
-//! remote: Resolving deltas: 100% (11/11), completed with 10 local objects.
-//! To https://github.com/bestia-dev/bestia_dev_text_to_speech.git
-//!  d0f31d3..3bdcc91 main -> main
+//! Among crates curl-rust, hyper, reqwest, Isahc, Surf and ureq, I choose ureq. It is minimal.
 //!
-//! After `cargo auto commit and push`
-//! run `cargo auto publish_to_crates_io`
-//! ```
-//!
-//! And finally if you want to publish it on crates.io. First you need the `access token` you get from crates.io.
-//!
-//! ```bash
-//! cargo login
-//! # type the access token
-//! cargo auto publish_to_crates_io
-//! ```
-//!
-//! ## lib.rs doc-comments
-//!
-//! The entire README.md is copied into lib.rs. This can be annoying to watch. You can collapse the entire section clicking on `// region: auto_md_to_doc_comments include README.md`.
-//!
-//! You can use `// region:` and `// endregion:` to mark sections you want to collapse in the editor.
-//!
-//! From this doc-comments the `docs` will be created. Take a look and try to write what other users would want to read in the `docs`.
-//!
-//! ## Modules
-//!
-//! I added one module `utils_mod.rs` just to showcase how modules are used in separate files.
-//!
-//! ## Markdown
-//!
-//! README.md and all the doc-comments are in markdown. To separate paragraphs in markdown use an empty line between them.
-//! I tried other variants like double-space or backslash, but an empty line is the most used in the wild.
-//!
-//! ## tests
-//!
-//! I added a unit-test, just to show how it looks. And an integration-test. So it is "ready-to-go".
-//! Run them with `cargo test`.
-//!
-//! ## examples
-//!
-//! In the directory `examples` every rs file is a bin executable.
-//! Run it with:
-//!
-//! ```bash
-//! cargo run --example example_1
-//! ```
 //!
 //! ## cargo crev reviews and advisory
 //!

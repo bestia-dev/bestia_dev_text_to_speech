@@ -5,16 +5,16 @@
 [comment]: # (auto_cargo_toml_to_md start)
 
 **Text-to-speech CLI using Google api**  
-***version: 0.1.28 date: 2022-04-08 author: [bestia.dev](bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
+***version: 0.1.30 date: 2022-04-08 author: [bestia.dev](bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
 
 [comment]: # (auto_cargo_toml_to_md end)
 
 [comment]: # (auto_lines_of_code start)
-[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-61-green.svg)](https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli/)
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-228-blue.svg)](https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli/)
-[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli/)
-[![Lines in examples](https://img.shields.io/badge/Lines_in_examples-15-yellow.svg)](https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli/)
-[![Lines in tests](https://img.shields.io/badge/Lines_in_tests-20-orange.svg)](https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli/)
+[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-63-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-165-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in examples](https://img.shields.io/badge/Lines_in_examples-15-yellow.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in tests](https://img.shields.io/badge/Lines_in_tests-20-orange.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 
 [comment]: # (auto_lines_of_code end)
 
@@ -116,24 +116,20 @@ echo $bestia_dev_text_to_speech_api_key
 unset bestia_dev_text_to_speech_api_key
 ```
 
+The simplest example from google:
+
+```bash
 curl -X POST \
 -H "Content-Type: application/json; charset=utf-8" \
 -d @request.json \
 "https://texttospeech.googleapis.com/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key"
+```
 
 Because of https only the domain part of the url `texttospeech.googleapis.com` is visible on the wire. The rest of the url `/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key` is encrypted. So it looks that the api-key is secure. They are encrypted on the wire (in transport) but if either end (user or server) logs the URL to a plain text file and does not sanitize credentials... now that's a different conversation. Browsers can save the entire url in history, but I am not using a browser.
 
 ## https client
 
 Among crates curl-rust, hyper, reqwest, Isahc, Surf and ureq, I choose ureq. It is minimal.
-
-
-  use std::sync::Arc;
-  use ureq::Agent;
-
-  let agent = ureq::AgentBuilder::new()
-      .tls_connector(Arc::new(native_tls::TlsConnector::new().unwrap()))
-      .build();
 
 
 ## cargo crev reviews and advisory

@@ -26,7 +26,7 @@ fn print_help() {
     println!(
         r#"        
 bestia_dev_text_to_speech --help
-The first and only argument is the fil_name of the text to speech.
+The first and only argument is the file_name of the text to speech:
 bestia_dev_text_to_speech text.txt
 "#
     );
