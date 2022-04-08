@@ -1,6 +1,6 @@
 [package]
 name = "bestia_dev_text_to_speech"
-version = "0.1.28"
+version = "0.1.30"
 description = "Text-to-speech CLI using Google api"
 authors = ["bestia.dev <info@bestia.dev>"]
 edition = "2021"
@@ -14,3 +14,4 @@ publish = false
 [dependencies]
 log = "0.4"
 pretty_env_logger="0.4.0"
+ureq="2.4.0"

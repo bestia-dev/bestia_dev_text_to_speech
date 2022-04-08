@@ -90,8 +90,7 @@ fn task_build() {
     println!(
         r#"
 After `cargo auto build`, run the compiled binary
-run `./target/debug/bestia_dev_text_to_speech print my_name`
-run `./target/debug/bestia_dev_text_to_speech upper my_name`
+run `./target/debug/bestia_dev_text_to_speech text.txt`
 later
 run `cargo auto release`
 "#
@@ -109,8 +108,7 @@ fn task_release() {
     println!(
         r#"
 After `cargo auto release`, , run the compiled binary
-run `./target/release/bestia_dev_text_to_speech print my_name`
-run `./target/release/bestia_dev_text_to_speech upper my_name`
+run `./target/release/bestia_dev_text_to_speech text.txt`
 later
 run `cargo auto doc`
 "#

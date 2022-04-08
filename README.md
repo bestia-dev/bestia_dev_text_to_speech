@@ -96,10 +96,44 @@ git push -u origin main
 
 Open `README.md` and delete the text you don't need. Don't delete the markers for the automation. You can see the markdown preview with (Ctrl+k, v). Save the changes.
 Commit the changes and push in `VSCode terminal`: `cargo auto commit_and_push "readme cleaned"`
+Commit and push often to reduce the risk of loosing your work.
+
+## google api text-to-speech
+
+In my googlecloud account I enabled the text-to-speech api: <https://console.cloud.google.com/apis/api/texttospeech.googleapis.com>  
+Service name `texttospeech.googleapis.com`  
+I need some credentials to access the api: <https://console.cloud.google.com/apis/credentials>
+Click `+Create credentials`, `API key`, then `edit`, rename to `API text-to-speech`, restrict to only `Cloud Text-to-Speech API`.
+Use this key in your application by passing it with the `?key=API_KEY` parameter for every request.
+Save this api key in env variable:
+
+```bash
+# put a space before the command to disable bash history
+ export bestia_dev_text_to_speech_api_key=YOUR_API_KEY
+env
+echo $bestia_dev_text_to_speech_api_key
+# finally to delete the env variable after use
+unset bestia_dev_text_to_speech_api_key
+```
+
+curl -X POST \
+-H "Content-Type: application/json; charset=utf-8" \
+-d @request.json \
+"https://texttospeech.googleapis.com/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key"
+
+Because of https only the domain part of the url `texttospeech.googleapis.com` is visible on the wire. The rest of the url `/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key` is encrypted. So it looks that the api-key is secure. They are encrypted on the wire (in transport) but if either end (user or server) logs the URL to a plain text file and does not sanitize credentials... now that's a different conversation. Browsers can save the entire url in history, but I am not using a browser.
+
+## https client
+
+Among crates curl-rust, hyper, reqwest, Isahc, Surf and ureq, I choose ureq. It is minimal.
 
 
+  use std::sync::Arc;
+  use ureq::Agent;
 
-
+  let agent = ureq::AgentBuilder::new()
+      .tls_connector(Arc::new(native_tls::TlsConnector::new().unwrap()))
+      .build();
 
 
 ## cargo crev reviews and advisory

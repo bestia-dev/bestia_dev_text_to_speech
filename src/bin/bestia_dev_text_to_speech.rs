@@ -1,4 +1,4 @@
-//! bestia_dev_text_to_speech/src/bin/bestia_dev_text_to_speech.rs
+//! src/bin/bestia_dev_text_to_speech.rs
 
 // The `bin` has all the stdin and stdout.
 // The `lib` must be in/out agnostic. That is the responsibility of the `bin`
@@ -8,36 +8,34 @@ fn main() {
     // logging is essential for every project
     pretty_env_logger::init();
 
-    // super simple argument parsing. There are crates that can parse complex arguments.
-    match std::env::args().nth(1).as_deref() {
-        None | Some("--help") | Some("-h") => print_help(),
-        Some("print") => match std::env::args().nth(2).as_deref() {
-            // second argument
-            Some(my_name) => {
-                print_my_name(my_name);
+    // The google api-key must be in the env variable bestia_dev_text_to_speech_api_key
+    match std::env::var("bestia_dev_text_to_speech_api_key") {
+        Err(_err) => println!("Error: Env variable $bestia_dev_text_to_speech_api_key not found!"),
+        Ok(api_key) => {
+            // the first CLI argument is the filename of the text to speech
+            match std::env::args().nth(1).as_deref() {
+                None | Some("--help") | Some("-h") => print_help(),
+                Some(file_name) => text_to_speech(file_name, &api_key),
             }
-            None => println!("Missing arguments `my_name`."),
-        },
-        Some("upper") => match std::env::args().nth(2).as_deref() {
-            // second argument
-            Some(my_name) => {
-                upper_my_name(my_name);
-            }
-            None => println!("Missing arguments `my_name`."),
-        },
-        _ => println!("Unrecognized arguments. Try `bestia_dev_text_to_speech --help`"),
+        }
     }
 }
 
 /// print help
 fn print_help() {
     println!(
-        r#"
+        r#"        
 bestia_dev_text_to_speech --help
-bestia_dev_text_to_speech print my_name
-bestia_dev_text_to_speech upper my_name
+The first and only argument is the fil_name of the text to speech.
+bestia_dev_text_to_speech text.txt
 "#
     );
+}
+
+/// print my name
+fn text_to_speech(file_name: &str, api_key: &str) {
+    // call the function from the `lib`
+    bestia_dev_text_to_speech::post_text_to_speech(file_name, api_key);
 }
 
 /// print my name

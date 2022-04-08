@@ -72,7 +72,7 @@
 //! Finished dev [unoptimized + debuginfo] target(s) in 2.72s
 //!
 //! After `cargo auto build`, run the compiled binary
-//! run `./target/debug/bestia_dev_text_to_speech print my_name`
+//! run `./target/debug/bestia_dev_text_to_speech text.txt`
 //! later
 //! run `cargo auto release`
 //! ```
@@ -224,6 +224,11 @@
 // The `lib` must be in/out agnostic. That is the responsibility of the `bin`
 
 mod utils_mod;
+
+pub fn post_text_to_speech(file_name: &str, api_key: &str) {
+    let body: String = ureq::get("http://example.com").set("Example-Header", "header value").call().unwrap().into_string().unwrap();
+    dbg!(body);
+}
 
 /// format the hello phrase
 pub fn format_hello_phrase(my_name: &str) -> String {
