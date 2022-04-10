@@ -115,7 +115,7 @@
 //! ```bash
 //! curl -X POST \
 //! -H "Content-Type: application/json; charset=utf-8" \
-//! -d @request.json \
+//! -d @sample_files/request.json \
 //! "https://texttospeech.googleapis.com/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key"
 //! ```
 //!
@@ -157,9 +157,52 @@
 
 mod utils_mod;
 
-pub fn post_text_to_speech(file_name: &str, api_key: &str) {
-    let body: String = ureq::get("http://example.com").set("Example-Header", "header value").call().unwrap().into_string().unwrap();
-    dbg!(body);
+/// post to google cloud the request for text-to-speech and return a byte[]
+pub fn post_text_to_speech(text: &str, api_key: &str) -> Vec<u8> {
+    let json = prepare_request_json(text);
+    // because of https only the part `texttospeech.googleapis.com` is visible on the wire.
+    // The rest of the URL `/v1/text:synthesize?key={}` is encrypted.
+    // So the secret api-key is encrypted over the wire.
+    let url = format!("https://texttospeech.googleapis.com/v1/text:synthesize?key={}", api_key);
+    let response_body: String = ureq::post(&url)
+        .set("Content-Type", "application/json; charset=utf-8")
+        .send_string(&json)
+        .unwrap()
+        .into_string()
+        .unwrap();
+    // extract the audio content from json format
+    // I should use a json library, but the format is fixed and is easy to extract the data.
+    let encoded_base64 = response_body.trim_start_matches("{\n  \"audioContent\": \"").trim_end_matches("\"\n}\n");
+    // base64 decode
+    let decoded = base64::decode(encoded_base64).unwrap();
+    // return Vec<u8>
+    decoded
+}
+
+/// format the request json from the text file
+pub fn prepare_request_json(text: &str) -> String {
+    // I should be using a json library here, but this is really a simple replace going on here.
+    //escape for json string: only 2 characters " and \
+    let text = text.replace(r#"\"#, r#"\\"#).replace(r#"""#, r#"\""#);
+    let json = format!(
+        r#"{{
+"input":{{
+    "text":"{}"
+}},
+"voice":{{
+    "languageCode":"en-US",
+    "name":"en-US-Wavenet-B",
+    "ssmlGender":"MALE"
+}},
+"audioConfig":{{
+    "audioEncoding":"MP3",
+    "pitch": -4.80
+}}
+}}"#,
+        text
+    );
+    // return
+    json
 }
 
 /// format the hello phrase

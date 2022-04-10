@@ -70,7 +70,7 @@ unset bestia_dev_text_to_speech_api_key</code></pre></div>
 <p>The simplest example from google:</p>
 <div class="example-wrap"><pre class="language-bash"><code>curl -X POST \
 -H &quot;Content-Type: application/json; charset=utf-8&quot; \
--d @request.json \
+-d @sample_files/request.json \
 &quot;https://texttospeech.googleapis.com/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key&quot;</code></pre></div>
 <p>Because of https only the domain part of the url <code>texttospeech.googleapis.com</code> is visible on the wire. The rest of the url <code>/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key</code> is encrypted. So it looks that the api-key is secure. They are encrypted on the wire (in transport) but if either end (user or server) logs the URL to a plain text file and does not sanitize credentials… now that’s a different conversation. Browsers can save the entire url in history, but I am not using a browser.</p>
 <h3 id="https-client" class="section-header"><a href="#https-client">https client</a></h3>

@@ -27,15 +27,31 @@ fn print_help() {
         r#"        
 bestia_dev_text_to_speech --help
 The first and only argument is the file_name of the text to speech:
-bestia_dev_text_to_speech text.txt
+bestia_dev_text_to_speech sample_files/text_1.txt
 "#
     );
 }
 
-/// print my name
+/// reads the text in file_name, converts to speech and saves a audio file with the same name, but extension mp3
 fn text_to_speech(file_name: &str, api_key: &str) {
+    // path should always use the Path type and not the overly generic String
+    let file_name = std::path::Path::new(file_name);
+    // early exit on every error
+    if !file_name.exists() {
+        log::error!("File name {} does not exist!", file_name.to_string_lossy());
+        return;
+    }
+    // then `bin` must solve all input/output. The `lib` is IO agnostic.
+    let text = std::fs::read_to_string(file_name).unwrap();
     // call the function from the `lib`
-    bestia_dev_text_to_speech::post_text_to_speech(file_name, api_key);
+    let mp3_bytes = bestia_dev_text_to_speech::post_text_to_speech(&text, api_key);
+    let mut new_file_name = std::path::PathBuf::from(file_name);
+    new_file_name.set_extension("mp3");
+    // save file
+    std::fs::write(&new_file_name, mp3_bytes).unwrap();
+    println!("");
+    println!("The speech audio file: {}. Play it.", &new_file_name.to_string_lossy());
+    println!("");
 }
 
 /// print my name

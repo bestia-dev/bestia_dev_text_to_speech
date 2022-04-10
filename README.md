@@ -121,7 +121,7 @@ The simplest example from google:
 ```bash
 curl -X POST \
 -H "Content-Type: application/json; charset=utf-8" \
--d @request.json \
+-d @sample_files/request.json \
 "https://texttospeech.googleapis.com/v1/text:synthesize?key=$bestia_dev_text_to_speech_api_key"
 ```
 
@@ -129,7 +129,18 @@ Because of https only the domain part of the url `texttospeech.googleapis.com` i
 
 ## https client
 
-Among crates curl-rust, hyper, reqwest, Isahc, Surf and ureq, I choose ureq. It is minimal.
+Among different crates for https client: curl-rust, hyper, reqwest, Isahc, Surf and ureq,  
+I choose ureq. It is minimal.
+
+## Build with cargo auto
+
+All needed automation tasks to build and manage the project are centralized in the directory `automation_tasks_rs`. This is a simple Rust project and it is easy to modify the tasks in your preferred language. The classic tasks are build, release, doc and commit_and_push. But you can add any task you need to repeat and is important for the managing of the project.  
+Use `cargo auto` to list the possible tasks. The command has bash-completion for easy writing command with just few keys.  
+
+
+## The result is mp3 file
+
+In VSCode right click on the file `speech.mp3` and choose `Download` to transfer the file over SSH to the local system.
 
 
 ## cargo crev reviews and advisory

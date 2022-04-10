@@ -3,6 +3,7 @@
         "'e",
         "Alla",
         "apos",
+        "compat",
         "crev",
         "ddd'e",
         "debuginfo",
@@ -11,6 +12,7 @@
         "endregion",
         "fontawesome",
         "githubssh",
+        "googleapis",
         "googlecloud",
         "htmlescape",
         "Isahc",
@@ -23,6 +25,7 @@
         "rustdevuser",
         "rustprojects",
         "sandboxed",
+        "ssml",
         "stmplt",
         "stylesheet",
         "tagname",
@@ -31,6 +34,7 @@
         "tmplt",
         "unoptimized",
         "ureq",
+        "Wavenet",
         "wtmplt",
         "zdravje"
     ]
