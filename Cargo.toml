@@ -1,6 +1,6 @@
 [package]
 name = "bestia_dev_text_to_speech"
-version = "0.1.40"
+version = "0.1.41"
 description = "Text-to-speech CLI using Google api"
 authors = ["bestia.dev <info@bestia.dev>"]
 edition = "2021"

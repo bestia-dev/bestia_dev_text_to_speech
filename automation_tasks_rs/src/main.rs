@@ -89,9 +89,9 @@ fn task_build() {
     run_shell_command("cargo build");
     println!(
         r#"
-After `cargo auto build`, run the compiled binary
-run `./target/debug/bestia_dev_text_to_speech sample_files/text_1.txt`
-later
+After `cargo auto build`, put the secret token in env variable
+run ` export bestia_dev_text_to_speech_api_key=YOUR_TOKEN` then run the compiled binary
+run `./target/debug/bestia_dev_text_to_speech sample_files/text_1.txt`, later
 run `cargo auto release`
 "#
     );
@@ -107,9 +107,9 @@ fn task_release() {
    
     println!(
         r#"
-After `cargo auto release`, , run the compiled binary
-run `./target/release/bestia_dev_text_to_speech sample_files/text_1.txt`
-later
+After `cargo auto release`, put the secret token in env variable
+run ` export bestia_dev_text_to_speech_api_key=YOUR_TOKEN` then run the compiled binary
+run `./target/release/bestia_dev_text_to_speech sample_files/text_1.txt`, later
 run `cargo auto doc`
 "#
     );
