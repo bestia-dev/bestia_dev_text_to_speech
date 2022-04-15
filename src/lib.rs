@@ -213,8 +213,8 @@ pub fn format_hello_phrase(my_name: &str) -> String {
 }
 
 /// format the hello phrase with uppercase name
-pub fn format_upper(my_name: &str) -> String {
-    log::info!("start format_upper()");
+pub fn format_upper_hello_phrase(my_name: &str) -> String {
+    log::info!("start format_upper_hello_phrase()");
     // shadowing the same variable name:
     let my_name = utils_mod::make_uppercase(my_name);
     // return

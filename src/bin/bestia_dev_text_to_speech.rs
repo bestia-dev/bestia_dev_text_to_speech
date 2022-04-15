@@ -53,15 +53,3 @@ fn text_to_speech(file_name: &str, api_key: &str) {
     println!("The speech audio file: {}. Play it.", &new_file_name.to_string_lossy());
     println!("");
 }
-
-/// print my name
-fn print_my_name(my_name: &str) {
-    // call the function from the `lib`
-    println!("{}", bestia_dev_text_to_speech::format_hello_phrase(my_name));
-}
-
-/// print my name
-fn upper_my_name(my_name: &str) {
-    // call the function from the `lib`
-    println!("{}", bestia_dev_text_to_speech::format_upper(my_name));
-}
