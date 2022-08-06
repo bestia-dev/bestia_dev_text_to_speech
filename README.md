@@ -5,7 +5,7 @@
 [comment]: # (auto_cargo_toml_to_md start)
 
 **Text-to-speech CLI using Google api**  
-***version: 0.1.30 date: 2022-04-08 author: [bestia.dev](bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
+***version: 0.1.30 date: 2022-04-08 author: [bestia.dev](https://bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
 
 [comment]: # (auto_cargo_toml_to_md end)
 
