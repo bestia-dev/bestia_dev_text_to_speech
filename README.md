@@ -1,22 +1,22 @@
-[comment]: # (auto_md_to_doc_comments segment start A)
+[//]: # (auto_md_to_doc_comments segment start A)
 
 # bestia_dev_text_to_speech
 
-[comment]: # (auto_cargo_toml_to_md start)
+[//]: # (auto_cargo_toml_to_md start)
 
 **Text-to-speech CLI using Google api**  
-***version: 0.1.30 date: 2022-04-08 author: [bestia.dev](https://bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
+***version: 0.1.44 date: 2023-05-31 author: [bestia.dev]() repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
 
-[comment]: # (auto_cargo_toml_to_md end)
+[//]: # (auto_cargo_toml_to_md end)
 
-[comment]: # (auto_lines_of_code start)
-[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-63-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-165-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[//]: # (auto_lines_of_code start)
+[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-98-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-161-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-30-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-15-yellow.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-20-orange.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 
-[comment]: # (auto_lines_of_code end)
+[//]: # (auto_lines_of_code end)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/blob/main/LICENSE) [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/) ![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/791106357.svg)
 
@@ -173,4 +173,4 @@ So I can drink a free beer for your health :-)
 
 
 
-[comment]: # (auto_md_to_doc_comments segment end A)
+[//]: # (auto_md_to_doc_comments segment end A)

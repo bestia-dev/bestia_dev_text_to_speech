@@ -4,15 +4,18 @@
 //! # bestia_dev_text_to_speech
 //!
 //! **Text-to-speech CLI using Google api**  
-//! ***version: 0.1.30 date: 2022-04-08 author: [bestia.dev](bestia.dev) repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
+//! ***version: 0.1.44 date: 2023-05-31 author: [bestia.dev]() repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
 //!
-//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-63-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-165-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-18-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-98-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-161-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-30-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-15-yellow.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-20-orange.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 //!
-//! [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/blob/main/LICENSE) [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+//! [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/blob/main/LICENSE) [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/) ![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/791106357.svg)
+//!
+//! Hashtags: #rustlang #tutorial  
+//! My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/bestia-dev/tutorials_rust_wasm).
 //!
 //! ## Motivation
 //!
@@ -123,8 +126,18 @@
 //!
 //! ## https client
 //!
-//! Among crates curl-rust, hyper, reqwest, Isahc, Surf and ureq, I choose ureq. It is minimal.
+//! Among different crates for https client: curl-rust, hyper, reqwest, Isahc, Surf and ureq,  
+//! I choose ureq. It is minimal.
 //!
+//! ## Build with cargo auto
+//!
+//! All needed automation tasks to build and manage the project are centralized in the directory `automation_tasks_rs`. This is a simple Rust project and it is easy to modify the tasks in your preferred language. The classic tasks are build, release, doc and commit_and_push. But you can add any task you need to repeat and is important for the managing of the project.  
+//! Use `cargo auto` to list the possible tasks. The command has bash-completion for easy writing command with just few keys.  
+//!
+//!
+//! ## The result is mp3 file
+//!
+//! In VSCode right click on the file `speech.mp3` and choose `Download` to transfer the file over SSH to the local system.
 //!
 //! ## cargo crev reviews and advisory
 //!
@@ -138,17 +151,21 @@
 //!
 //! <https://web.crev.dev/rust-reviews/crates/>
 //!
-//! ## open-source and free as a beer
+//! ## Open-source and free as a beer
 //!
-//! My open-source projects are free as a beer (MIT license).
-//!
-//! I just love programming.
-//!
-//! But I need also to drink. If you find my projects and tutorials helpful,please buy me a beer donating on my [paypal](https://paypal.me/LucianoBestia).
-//!
-//! You know the price of a beer in your local bar ;-) So I can drink a free beer for your health :-)
-//!
+//! My open-source projects are free as a beer (MIT license).  
+//! I just love programming.  
+//! But I need also to drink. If you find my projects and tutorials helpful, please buy me a beer by donating to my [PayPal](https://paypal.me/LucianoBestia).  
+//! You know the price of a beer in your local bar ;-)  
+//! So I can drink a free beer for your health :-)  
 //! [Na zdravje!](https://translate.google.com/?hl=en&sl=sl&tl=en&text=Na%20zdravje&op=translate) [Alla salute!](https://dictionary.cambridge.org/dictionary/italian-english/alla-salute) [Prost!](https://dictionary.cambridge.org/dictionary/german-english/prost) [Nazdravlje!](https://matadornetwork.com/nights/how-to-say-cheers-in-50-languages/) 🍻
+//!
+//! [//bestia.dev](https://bestia.dev)  
+//! [//github.com/bestia-dev](https://github.com/bestia-dev)  
+//! [//bestiadev.substack.com](https://bestiadev.substack.com)  
+//! [//youtube.com/@bestia-dev-tutorials](https://youtube.com/@bestia-dev-tutorials)  
+//!
+//!
 //!
 // endregion: auto_md_to_doc_comments include README.md A //!
 

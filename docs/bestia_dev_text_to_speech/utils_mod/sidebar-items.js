@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["make_uppercase","return uppercase"]]});
+window.SIDEBAR_ITEMS = {"fn":["make_uppercase"]};

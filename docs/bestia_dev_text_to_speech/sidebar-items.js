@@ -1,1 +1,1 @@
-initSidebarItems({"fn":[["format_hello_phrase","format the hello phrase"],["format_upper_hello_phrase","format the hello phrase with uppercase name"],["post_text_to_speech",""]],"mod":[["utils_mod","Just an example how to create and call a module in a separate file."]]});
+window.SIDEBAR_ITEMS = {"fn":["format_hello_phrase","format_upper_hello_phrase","post_text_to_speech","prepare_request_json"],"mod":["utils_mod"]};
