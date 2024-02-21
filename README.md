@@ -7,8 +7,8 @@
 **Text-to-speech CLI using Google api**  
 ***version: 0.1.44 date: 2023-05-31 author: [bestia.dev]() repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
 
-![status](https://img.shields.io/badge/maintained-green) 
-![status](https://img.shields.io/badge/ready_for_use-green) 
+ ![status](https://img.shields.io/badge/maintained-green)
+ ![status](https://img.shields.io/badge/ready_for_use-green)
 
 [//]: # (auto_cargo_toml_to_md end)
 
@@ -21,7 +21,9 @@
 
 [//]: # (auto_lines_of_code end)
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/blob/main/LICENSE) [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/) ![Hits](https://bestia.dev/webpage_hit_counter/get_svg_image/791106357.svg)
+ [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/blob/main/LICENSE)
+ [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+  ![bestia_dev_text_to_speech](https://bestia.dev/webpage_hit_counter/get_svg_image/205572024.svg)
 
 Hashtags: #rustlang #tutorial  
 My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/bestia-dev/tutorials_rust_wasm).
