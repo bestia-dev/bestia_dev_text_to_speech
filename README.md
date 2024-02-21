@@ -23,7 +23,7 @@
 
  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/blob/main/LICENSE)
  [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-  ![bestia_dev_text_to_speech](https://bestia.dev/webpage_hit_counter/get_svg_image/205572024.svg)
+  ![bestia_dev_text_to_speech](https://bestia.dev/webpage_hit_counter/get_svg_image/791106357.svg)
 
 Hashtags: #rustlang #tutorial  
 My projects on Github are more like a tutorial than a finished product: [bestia-dev tutorials](https://github.com/bestia-dev/tutorials_rust_wasm).
