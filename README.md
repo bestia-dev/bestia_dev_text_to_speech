@@ -62,7 +62,7 @@ In `VSCode terminal`:
 ```bash
 # save the passphrase to communicate with Github over SSH
 eval $(ssh-agent)
-ssh-add /home/rustdevuser/.ssh/githubssh1
+ssh-add /home/rustdevuser/.ssh/github_com_ssh_1
 # clone the template
 mkdir ~/rustprojects
 cd ~/rustprojects
