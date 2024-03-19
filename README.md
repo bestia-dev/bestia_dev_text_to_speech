@@ -47,7 +47,7 @@ What is more fun, than write an application in Rust for my problem?
 ## Rust CLI from template
 
 The easiest application to write in Rust is a CLI in Linux. And honestly I don't need more. I will have a text file as input and an mp3 file as output. Perfect for a CLI application.
-For the first time I will develope a new Rust application entirely inside a docker container using my project <https://github.com/bestia-dev/docker_rust_development>. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (<https://github.com/bestia-dev/win10_wsl2_debian11>).  
+For the first time I will develope a new Rust application entirely inside a docker container using my project <https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/docker_rust_development>. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (<https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/win10_wsl2_debian11-Env/win10_wsl2_debian11>).  
 In `WSL2 terminal`:
 
 ```bash
