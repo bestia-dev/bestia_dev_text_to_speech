@@ -22,13 +22,13 @@ But it is only an api. There is no prepared application or website that I can us
 <p>What is more fun, than write an application in Rust for my problem?</p>
 <h3 id="rust-cli-from-template"><a href="#rust-cli-from-template">Rust CLI from template</a></h3>
 <p>The easiest application to write in Rust is a CLI in Linux. And honestly I don’t need more. I will have a text file as input and an mp3 file as output. Perfect for a CLI application.
-For the first time I will develope a new Rust application entirely inside a docker container using my project <a href="https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/docker_rust_development">https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/docker_rust_development</a>. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (<a href="https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/win10_wsl2_debian11">https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/win10_wsl2_debian11</a>).<br />
+For the first time I will develope a new Rust application entirely inside a docker container using my project <a href="https://github.com/CRUSTDE-Containerized-Rust-DevEnv/crustde_cnt_img_pod">https://github.com/CRUSTDE-Containerized-Rust-DevEnv/crustde_cnt_img_pod</a>. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (<a href="https://github.com/CRUSTDE-Containerized-Rust-DevEnv/win10_wsl2_debian11">https://github.com/CRUSTDE-Containerized-Rust-DevEnv/win10_wsl2_debian11</a>).<br />
 In <code>WSL2 terminal</code>:</p>
-<div class="example-wrap"><pre class="language-bash"><code>cd rustprojects/docker_rust_development/
+<div class="example-wrap"><pre class="language-bash"><code>cd rustprojects/crustde_cnt_img_pod/
 # my development pod/container is already created. I just need to restart it after reboot
-sh rust_dev_pod_after_reboot.sh
+sh crustde_pod_after_reboot.sh
 </code></pre></div>
-<p>In VSCode: <code>F1</code>, type <code>ssh</code>, choose <code>Remote-SSH:Connect to Host...</code>, choose <code>rust_dev_pod</code>, type the passphrase for the SSH key. We have opened a new VSCode window that works inside the Rust development container.</p>
+<p>In VSCode: <code>F1</code>, type <code>ssh</code>, choose <code>Remote-SSH:Connect to Host...</code>, choose <code>crustde_pod</code>, type the passphrase for the SSH key. We have opened a new VSCode window that works inside the Rust development container.</p>
 <p>I will also use for the first time my template for Rust CLI development: <a href="https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli">https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli</a>. It separates a lib and a bin, so the project could be used as a library for other projects. It has prepared automation tasks for building the project and some samples how to use tests and examples.<br />
 In <code>VSCode terminal</code>:</p>
 <div class="example-wrap"><pre class="language-bash"><code># save the passphrase to communicate with Github over SSH

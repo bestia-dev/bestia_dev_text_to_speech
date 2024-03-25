@@ -275,16 +275,16 @@
 //! ## Rust CLI from template
 //!
 //! The easiest application to write in Rust is a CLI in Linux. And honestly I don&#39;t need more. I will have a text file as input and an mp3 file as output. Perfect for a CLI application.
-//! For the first time I will develope a new Rust application entirely inside a docker container using my project &lt;https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/docker_rust_development&gt;. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (&lt;https://github.com/CRUSTDE-Containerized-Rust-Dev-Env/win10_wsl2_debian11&gt;).  
+//! For the first time I will develope a new Rust application entirely inside a docker container using my project &lt;https://github.com/CRUSTDE-Containerized-Rust-DevEnv/crustde_cnt_img_pod&gt;. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (&lt;https://github.com/CRUSTDE-Containerized-Rust-DevEnv/win10_wsl2_debian11&gt;).  
 //! In `WSL2 terminal`:
 //!
 //! ```bash
-//! cd rustprojects/docker_rust_development/
+//! cd rustprojects/crustde_cnt_img_pod/
 //! # my development pod/container is already created. I just need to restart it after reboot
-//! sh rust_dev_pod_after_reboot.sh
+//! sh crustde_pod_after_reboot.sh
 //! ```
 //!
-//! In VSCode: `F1`, type `ssh`, choose `Remote-SSH:Connect to Host...`, choose `rust_dev_pod`, type the passphrase for the SSH key. We have opened a new VSCode window that works inside the Rust development container.
+//! In VSCode: `F1`, type `ssh`, choose `Remote-SSH:Connect to Host...`, choose `crustde_pod`, type the passphrase for the SSH key. We have opened a new VSCode window that works inside the Rust development container.
 //!
 //! I will also use for the first time my template for Rust CLI development: &lt;https://github.com/bestia-dev/bestia_dev_cargo_auto_new_cli&gt;. It separates a lib and a bin, so the project could be used as a library for other projects. It has prepared automation tasks for building the project and some samples how to use tests and examples.  
 //! In `VSCode terminal`:
