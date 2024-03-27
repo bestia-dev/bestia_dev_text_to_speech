@@ -22,7 +22,7 @@ But it is only an api. There is no prepared application or website that I can us
 <p>What is more fun, than write an application in Rust for my problem?</p>
 <h3 id="rust-cli-from-template"><a href="#rust-cli-from-template">Rust CLI from template</a></h3>
 <p>The easiest application to write in Rust is a CLI in Linux. And honestly I don’t need more. I will have a text file as input and an mp3 file as output. Perfect for a CLI application.
-For the first time I will develope a new Rust application entirely inside a docker container using my project <a href="https://github.com/CRUSTDE-Containerized-Rust-DevEnv/crustde_cnt_img_pod">https://github.com/CRUSTDE-Containerized-Rust-DevEnv/crustde_cnt_img_pod</a>. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (<a href="https://github.com/CRUSTDE-Containerized-Rust-DevEnv/win10_wsl2_debian11">https://github.com/CRUSTDE-Containerized-Rust-DevEnv/win10_wsl2_debian11</a>).<br />
+For the first time I will develope a new Rust application entirely inside a docker container using my project <a href="https://github.com/CRUSTDE-ContainerizedRustDevEnv/crustde_cnt_img_pod">https://github.com/CRUSTDE-ContainerizedRustDevEnv/crustde_cnt_img_pod</a>. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (<a href="https://github.com/CRUSTDE-ContainerizedRustDevEnv/win10_wsl2_debian11">https://github.com/CRUSTDE-ContainerizedRustDevEnv/win10_wsl2_debian11</a>).<br />
 In <code>WSL2 terminal</code>:</p>
 <div class="example-wrap"><pre class="language-bash"><code>cd rustprojects/crustde_cnt_img_pod/
 # my development pod/container is already created. I just need to restart it after reboot
@@ -75,7 +75,7 @@ Save this api key in env variable:</p>
 <div class="example-wrap"><pre class="language-bash"><code># put a space before the command to disable bash history
  export bestia_dev_text_to_speech_api_key=YOUR_API_KEY
 env
-echo $bestia_dev_text_to_speech_api_key
+printf "$bestia_dev_text_to_speech_api_key\n"
 # finally to delete the env variable after use
 unset bestia_dev_text_to_speech_api_key
 </code></pre></div>

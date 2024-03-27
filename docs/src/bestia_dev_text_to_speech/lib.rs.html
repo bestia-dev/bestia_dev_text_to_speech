@@ -275,7 +275,7 @@
 //! ## Rust CLI from template
 //!
 //! The easiest application to write in Rust is a CLI in Linux. And honestly I don&#39;t need more. I will have a text file as input and an mp3 file as output. Perfect for a CLI application.
-//! For the first time I will develope a new Rust application entirely inside a docker container using my project &lt;https://github.com/CRUSTDE-Containerized-Rust-DevEnv/crustde_cnt_img_pod&gt;. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (&lt;https://github.com/CRUSTDE-Containerized-Rust-DevEnv/win10_wsl2_debian11&gt;).  
+//! For the first time I will develope a new Rust application entirely inside a docker container using my project &lt;https://github.com/CRUSTDE-ContainerizedRustDevEnv/crustde_cnt_img_pod&gt;. I want to have my rust development sandboxed. I am scared to allow tools and crates from unknown developers to have full access to my underlying system: Win10+WSL2 (&lt;https://github.com/CRUSTDE-ContainerizedRustDevEnv/win10_wsl2_debian11&gt;).  
 //! In `WSL2 terminal`:
 //!
 //! ```bash
@@ -347,7 +347,7 @@
 //! # put a space before the command to disable bash history
 //!  export bestia_dev_text_to_speech_api_key=YOUR_API_KEY
 //! env
-//! echo $bestia_dev_text_to_speech_api_key
+//! printf "$bestia_dev_text_to_speech_api_key\n"
 //! # finally to delete the env variable after use
 //! unset bestia_dev_text_to_speech_api_key
 //! ```
