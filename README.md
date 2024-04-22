@@ -22,7 +22,7 @@
 [//]: # (auto_lines_of_code end)
 
  [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/blob/main/LICENSE)
- [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/RustAction/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+ [![Rust](https://github.com/bestia-dev/bestia_dev_text_to_speech/workflows/rust_fmt_auto_build_test/badge.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
   ![bestia_dev_text_to_speech](https://bestia.dev/webpage_hit_counter/get_svg_image/791106357.svg)
 
 Hashtags: #rustlang #tutorial  
