@@ -6,9 +6,11 @@
 [//]: # (auto_cargo_toml_to_md start)
 
 **Text-to-speech CLI using Google api**  
-***version: 0.1.51 date: 2025-08-14 author: [bestia.dev]() repository: [GitHub](https://github.com/bestia-dev/bestia_dev_text_to_speech)***
+***version: 0.1.52 date: 2025-08-14 author: [bestia.dev]() repository: [GitHub](https://github.com/bestia-dev/bestia_dev_text_to_speech)***
 
  ![maintained](https://img.shields.io/badge/maintained-green)
+ ![ready-for-use](https://img.shields.io/badge/ready_for_use-green)
+ ![rustlang](https://img.shields.io/badge/rustlang-orange)
 
 [//]: # (auto_cargo_toml_to_md end)
 
