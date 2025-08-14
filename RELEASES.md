@@ -12,6 +12,8 @@ The TODO section is part of the [README.md](https://github.com/bestia-dev/bestia
 
 - keywords
 
+- keywords
+
 ## Version 0.1.51 (2025-08-14)
 
 - update voice to AI

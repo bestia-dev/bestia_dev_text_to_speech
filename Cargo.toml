@@ -3,6 +3,7 @@ name = "bestia_dev_text_to_speech"
 version = "0.1.52"
 description = "Text-to-speech CLI using Google api"
 authors = ["bestia.dev <info@bestia.dev>"]
+homepage = "https://bestia.dev"
 edition = "2021"
 license = "MIT"
 readme = "README.md"
