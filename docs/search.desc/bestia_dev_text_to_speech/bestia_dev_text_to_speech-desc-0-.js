@@ -1,0 +1,1 @@
+searchState.loadedDescShard("bestia_dev_text_to_speech", 0, "bestia_dev_text_to_speech\nformat the hello phrase\nformat the hello phrase with uppercase name\npost to google cloud the request for text-to-speech and …\nformat the request json from the text file\nJust an example how to create and call a module in a …\nreturn uppercase")

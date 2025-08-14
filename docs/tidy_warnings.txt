@@ -1,0 +1,155 @@
+./docs/help.html
+Document: "2" is not a file!
+
+line 1 column 2433 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2433 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2449 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 1760 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/settings.html
+Document: "2" is not a file!
+
+line 1 column 2435 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2435 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2451 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 1758 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/src/bestia_dev_text_to_speech/utils_mod.rs.html
+Document: "2" is not a file!
+
+line 1 column 2073 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2073 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2089 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2179 - Warning: <div> isn't allowed in <h1> elements
+line 1 column 2230 - Warning: discarding unexpected </div>
+line 1 column 2253 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2253 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2270 - Warning: discarding unexpected </rustdoc-toolbar>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/src/bestia_dev_text_to_speech/lib.rs.html
+Document: "2" is not a file!
+
+line 1 column 2061 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2061 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2077 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2167 - Warning: <div> isn't allowed in <h1> elements
+line 1 column 2218 - Warning: discarding unexpected </div>
+line 1 column 2235 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2235 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2252 - Warning: discarding unexpected </rustdoc-toolbar>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/utils_mod/fn.make_uppercase.html
+Document: "2" is not a file!
+
+line 1 column 2433 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2433 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2449 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2806 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2806 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2823 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1889 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/utils_mod/index.html
+Document: "2" is not a file!
+
+line 1 column 2704 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2704 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2720 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 3018 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3018 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 3035 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1926 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/fn.format_hello_phrase.html
+Document: "2" is not a file!
+
+line 1 column 2298 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2298 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2314 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2632 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2632 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2649 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1860 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/fn.prepare_request_json.html
+Document: "2" is not a file!
+
+line 1 column 2318 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2318 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2334 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2653 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2653 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2670 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1880 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/all.html
+Document: "2" is not a file!
+
+line 1 column 2406 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2406 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2422 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 1803 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/fn.format_upper_hello_phrase.html
+Document: "2" is not a file!
+
+line 1 column 2324 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2324 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2340 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2664 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2664 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2681 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1886 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/fn.post_text_to_speech.html
+Document: "2" is not a file!
+
+line 1 column 2346 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2346 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 2362 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 2680 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 2680 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 2697 - Warning: discarding unexpected </rustdoc-toolbar>
+line 1 column 1908 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/bestia_dev_text_to_speech/index.html
+Document: "2" is not a file!
+
+line 1 column 3798 - Error: <rustdoc-search> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 3798 - Warning: discarding unexpected <rustdoc-search>
+line 1 column 3814 - Warning: discarding unexpected </rustdoc-search>
+line 1 column 4035 - Error: <rustdoc-toolbar> is not recognized! Did you mean to enable the custom-tags option?
+line 1 column 4035 - Warning: discarding unexpected <rustdoc-toolbar>
+line 1 column 4052 - Warning: discarding unexpected </rustdoc-toolbar>
+line 4 column 54 - Warning: <a> attribute "href" lacks value
+line 1 column 1842 - Warning: trimming empty <button>
+This document has errors that must be fixed before
+using HTML Tidy to generate a tidied up version.
+
+./docs/index.html
+Document: "2" is not a file!
+
+line 1 column 1 - Warning: missing <!DOCTYPE> declaration
+line 1 column 1 - Warning: inserting missing 'title' element
