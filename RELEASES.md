@@ -12,5 +12,7 @@ The TODO section is part of the [README.md](https://github.com/bestia-dev/bestia
 
 - update voice to AI
 
+- new voice
+
 ## Version 0.0.1
 

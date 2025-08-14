@@ -1,15 +1,17 @@
 [package]
 name = "bestia_dev_text_to_speech"
-version = "0.1.49"
+version = "0.1.51"
 description = "Text-to-speech CLI using Google api"
 authors = ["bestia.dev <info@bestia.dev>"]
 edition = "2021"
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/bestia-dev/bestia_dev_text_to_speech"
-categories = ["rust-patterns"]
 # Keyword must be only one word: lowercase letters, hyphens(-) or numbers, less then 35 characters, at most 5 keywords per crate
 keywords = ["maintained"]
+# Allowed categories are listed here <https://crates.io/category_slugs>
+categories = ["command-line-utilities"]
+# Never publish to crates.io.
 publish = false
 
 [dependencies]

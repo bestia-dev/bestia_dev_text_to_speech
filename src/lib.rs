@@ -41,13 +41,12 @@ pub fn prepare_request_json(text: &str) -> String {
     "text":"{}"
 }},
 "voice":{{
-    "languageCode":"en-US",
-    "name":"en-AU-Chirp3-HD-Zubenelgen",
+    "languageCode":"en-AU",
+    "name":"en-AU-Chirp3-HD-Zubenelgenubi",
     "ssmlGender":"MALE"
 }},
 "audioConfig":{{
-    "audioEncoding":"MP3",
-    "pitch": -4.80
+    "audioEncoding":"MP3"
 }}
 }}"#,
         text
