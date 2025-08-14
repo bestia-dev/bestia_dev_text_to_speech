@@ -49,7 +49,7 @@ fn text_to_speech(file_name: &str, api_key: &str) {
     new_file_name.set_extension("mp3");
     // save file
     std::fs::write(&new_file_name, mp3_bytes).unwrap();
-    println!("");
+    println!();
     println!("The speech audio file: {}. Play it.", &new_file_name.to_string_lossy());
-    println!("");
+    println!();
 }

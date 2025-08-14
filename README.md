@@ -6,17 +6,16 @@
 [//]: # (auto_cargo_toml_to_md start)
 
 **Text-to-speech CLI using Google api**  
-***version: 0.1.44 date: 2023-05-31 author: [bestia.dev]() repository: [Github](https://github.com/bestia-dev/bestia_dev_text_to_speech)***  
+***version: 0.1.49 date: 2025-08-14 author: [bestia.dev]() repository: [GitHub](https://github.com/bestia-dev/bestia_dev_text_to_speech)***
 
- ![status](https://img.shields.io/badge/maintained-green)
- ![status](https://img.shields.io/badge/ready_for_use-green)
+ ![maintained](https://img.shields.io/badge/maintained-green)
 
 [//]: # (auto_cargo_toml_to_md end)
 
 [//]: # (auto_lines_of_code start)
-[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-98-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-161-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
-[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-30-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-100-green.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-12-blue.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
+[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-28-purple.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-15-yellow.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-20-orange.svg)](https://github.com/bestia-dev/bestia_dev_text_to_speech/)
 

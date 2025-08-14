@@ -22,11 +22,12 @@ pub fn post_text_to_speech(text: &str, api_key: &str) -> Vec<u8> {
         .unwrap();
     // extract the audio content from json format
     // I should use a json library, but the format is fixed and is easy to extract the data.
-    let encoded_base64 = response_body.trim_start_matches("{\n  \"audioContent\": \"").trim_end_matches("\"\n}\n");
+    let encoded_base64 = response_body
+        .trim_start_matches("{\n  \"audioContent\": \"")
+        .trim_end_matches("\"\n}\n");
     // base64 decode
-    let decoded = base64::decode(encoded_base64).unwrap();
     // return Vec<u8>
-    decoded
+    base64::decode(encoded_base64).unwrap()
 }
 
 /// format the request json from the text file
@@ -41,7 +42,7 @@ pub fn prepare_request_json(text: &str) -> String {
 }},
 "voice":{{
     "languageCode":"en-US",
-    "name":"en-US-Wavenet-B",
+    "name":"en-AU-Chirp3-HD-Zubenelgen",
     "ssmlGender":"MALE"
 }},
 "audioConfig":{{

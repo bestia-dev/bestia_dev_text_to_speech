@@ -1,6 +1,6 @@
 [package]
 name = "bestia_dev_text_to_speech"
-version = "0.1.44"
+version = "0.1.49"
 description = "Text-to-speech CLI using Google api"
 authors = ["bestia.dev <info@bestia.dev>"]
 edition = "2021"
@@ -8,7 +8,8 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/bestia-dev/bestia_dev_text_to_speech"
 categories = ["rust-patterns"]
-keywords = ["text to speech"]
+# Keyword must be only one word: lowercase letters, hyphens(-) or numbers, less then 35 characters, at most 5 keywords per crate
+keywords = ["maintained"]
 publish = false
 
 [dependencies]
